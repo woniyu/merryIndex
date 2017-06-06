@@ -48,10 +48,6 @@ public class MerryController {
 
                 }
 //                map.addAttribute("photo",photos);
-
-
-
-
             }
             if (null!=wishWalls&&wishWalls.size()>0){
                 map.addAttribute("wishWalls",wishWalls);
