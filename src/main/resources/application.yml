@@ -1,0 +1,16 @@
+
+spring:
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://114.215.151.127:3306/test?autoReconnect=true&initialTimeout=3&useUnicode=true&characterEncoding=utf-8
+      username: root
+      password: WANG199000zz
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  thymeleaf:
+    cache: false
+server:
+  context-path: /merry
+  port: 8080

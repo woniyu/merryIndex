@@ -1,0 +1,236 @@
+﻿<!DOCTYPE HTML >
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <title>婚礼</title>
+    <link rel="stylesheet" type="text/css" href="/merry/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="/merry/css/index.css"/>
+    <script type="text/javascript" src="/merry/js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="/merry/js/jquery-ui-1.10.2.custom.js"></script>
+    <script type="text/javascript" src="/merry/js/index.js"></script>
+</head>
+<body>
+    <!--[if ie 6]>
+  <style type="text/css">
+      .mask {position: absolute; height: 800px;}
+      .pop-box {_position: absolute;}
+  </style>
+  <![endif]-->
+    <div class="container">
+        <!-- 移动的婚车 -->
+        <div class="car">
+            <img class="u-car" src="/merry/images/moveCar.png" />
+            <img class="u-dog" src="/merry/images/ballon.gif" />
+        </div>
+        <!-- 首页 -->
+        <div class="home">
+            <div class="nav">
+                <ul>
+                    <li><span id="to-picture">相册</span></li>
+                    <li><span id="to-invitation">邀请函</span></li>
+                    <li><span id="to-wall">祝福墙</span></li>
+                    <li><span id="to-address">婚礼地点</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 邀请函 -->
+        <div class="invitation">
+            <!--<span id="invite-return" class="u-return">返回首页</span>-->
+            <img class="u-return" id="invite-return" src="/merry/images/btn_return.png" />
+            <div class="invitation-content">
+            </div>
+        </div>
+        <!-- 婚纱照 -->
+        <div class="wedding-photos">
+            <div>
+                <img src="/merry/images/photo1.jpg" /></div>
+            <div>
+                <img src="/merry/images/photo2.jpg" /></div>
+            <div>
+                <img src="/merry/images/photo3.jpg" /></div>
+            <div>
+                <img src="/merry/images/photo4.jpg" /></div>
+            <div>
+                <img src="/merry/images/photo5.jpg" /></div>
+        </div>
+        <!-- 场景六 -->
+        <div class="six-box">
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+            <div>
+            </div>
+        </div>
+        <!-- 场景七祝福墙内容 -->
+        <div class="seven-box">
+            <img id="blessing-return" class="u-return" src="/merry/images/btn_return.png" />
+            <div class="clickMe">
+                点我送祝福</div>
+            <div class="seven-content">
+                <div class="note-a1">
+                </div>
+                <div class="note-a2">
+                </div>
+                <div class="note-a3">
+                </div>
+                <div class="note-a4">
+                </div>
+                <div class="note-a5">
+                </div>
+                <div class="note-a6">
+                </div>
+                <div class="note-a7">
+                </div>
+                <div class="note-a8">
+                </div>
+                <div class="note-a9">
+                </div>
+                <div class="note-a10">
+                </div>
+                <div class="note-a11">
+                </div>
+                <div class="note-a12">
+                </div>
+
+                <div class="note-2" th:each="wishWall:${wishWalls}" th:text="${wishWall.content}"></div>
+
+                <!--<div class="note-1">-->
+                    <!--一定要幸福哦~</div>-->
+                <!--<div class="note-2">-->
+                    <!--祝你们白头偕老！</div>-->
+                <!--<div class="note-3">-->
+                    <!--早生贵子~</div>-->
+                <!--<div class="note-4">-->
+                    <!--新婚快乐~</div>-->
+                <!--<div class="note-5">-->
+                    <!--生个宝宝认我做干妈！</div>-->
+                <!--<div class="note-6">-->
+                    <!--喜结良缘O(∩_∩)O哈哈哈~</div>-->
+                <!--<div class="note-1">-->
+                    <!--一定要幸福哦~</div>-->
+                <!--<div class="note-2">-->
+                    <!--祝你们白头偕老！</div>-->
+                <!--<div class="note-3">-->
+                    <!--早生贵子~</div>-->
+                <!--<div class="note-4">-->
+                    <!--新婚快乐~</div>-->
+                <!--<div class="note-5">-->
+                    <!--生个宝宝认我做干妈！</div>-->
+                <!--<div class="note-6">-->
+                    <!--喜结良缘O(∩_∩)O哈哈哈~</div>-->
+            </div>
+        </div>
+        <!-- 照片墙 -->
+        <div class="picture-wall">
+            <img class="u-return" id="picture-return" src="/merry/images/btn_return.png" />
+
+
+
+            <div class="pic0 picRow">
+                <img src="/merry/images/pic0.jpg" th:src="@{${photo0.path}}" /></div>
+            <div class="pic1 picRow">
+                <img src="/merry/images/pic1.jpg" th:src="@{${photo1.path}}"/></div>
+            <div class="pic2 picCol">
+                <img src="/merry/images/pic2.jpg" th:src="@{${photo2.path}}"/></div>
+            <div class="pic3 picCol">
+                <img src="/merry/images/pic3.jpg" th:src="@{${photo3.path}}"/></div>
+            <div class="pic4 picCol">
+                <img src="/merry/images/pic4.jpg" th:src="@{${photo4.path}}"/></div>
+            <div class="pic5 picCol">
+                <img src="/merry/images/pic5.jpg" th:src="@{${photo5.path}}"/></div>
+            <div class="pic6 picRow">
+                <img src="/merry/images/pic6.jpg" th:src="@{${photo6.path}}"/></div>
+            <div class="pic7 picRow">
+                <img src="/merry/images/pic7.jpg" th:src="@{${photo7.path}}"/></div>
+            <div class="pic8 picRow">
+                <img src="/merry/images/pic8.jpg" th:src="@{${photo8.path}}"/></div>
+            <div class="pic9 picCol">
+                <img src="/merry/images/pic9.jpg" th:src="@{${photo9.path}}"/></div>
+            <div class="pic10 picCol">
+                <img src="/merry/images/pic10.jpg" th:src="@{${photo10.path}}"/></div>
+            <div class="pic11 picRow">
+                <img src="/merry/images/pic11.jpg" th:src="@{${photo11.path}}"/></div>
+        </div>
+        <!-- 婚礼地址 -->
+        <div class="address">
+            <img class="u-return" id="address-return" src="/merry/images/btn_return.png" />
+            <img class="u-love" src="/merry/images/love.gif" />
+            <img src="/merry/images/address.jpg" />
+        </div>
+    </div>
+    <!-- 遮罩层 -->
+    <div class="mask">
+    </div>
+    <div class="pop-box">
+        <h1>
+            送上祝福语</h1>
+        <textarea id="write">写上您的祝福吧~</textarea>
+        <div class="u-sure" id="uSure">
+            确定</div>
+    </div>
+    <!-- 背景音乐 -->
+    <embed src="#" width="0" height="0" autostart="true" loop="true"/>
+    <object data="#" type="application/x-mplayer2" width="0" height="0">    
+        <param name="src" value="music.mp3"/>
+        <param name="autostart" value="1"/>
+        <param name="playcount" value="0"/>
+    </object>
+
+    <script type="text/javascript">
+
+        $(function () {
+            $("#uSure").click(function () {
+               var href=  window.location.href;
+               var hrefs = href.split("/")
+                var userId= hrefs[hrefs.length-1]
+                var contextPath = "merry";
+               var content = $("#write").val()
+                if (!content){
+                   return
+                }
+               $.ajax({
+                   url:"/merry/wishWall/add",
+                   type:'post',
+                   data:{userId:userId,content:content},
+                   success:function (data) {
+                       if (data.code=200){
+//                           alert("保存成功")
+                       }else alert("保存失败")
+
+                   }
+               })
+            });
+        })
+
+    </script>
+
+ <!--<script src="http://www.w2bc.com/scripts/2bc/_gg_970_90.js" type="text/javascript"></script>-->
+</body>
+</html>
