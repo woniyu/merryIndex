@@ -71,6 +71,14 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+
+		<!--引入mongodb驱动-->
+		<dependency>
+			<groupId>org.mongodb</groupId>
+			<artifactId>mongodb-driver</artifactId>
+			<version>3.4.2</version>
+		</dependency>
+		<!--引入mongodb驱动-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.session</groupId>-->
 			<!--<artifactId>spring-session</artifactId>-->
