@@ -119,6 +119,20 @@
 			<version>1.2.6</version>
 		</dependency>
 
+
+		<!--加入缓存配置-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-cache</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+		</dependency>
+		<!--加入缓存配置-->
+
+
 		<!--session 共享配置start-->
 		<!--<dependency>-->
 			<!--<groupId>org.springframework.session</groupId>-->

@@ -3,6 +3,7 @@ package cn.com.fhz.aspect;
 import com.mongodb.BasicDBObject;
 import org.apache.log4j.Logger;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -26,9 +27,9 @@ import java.util.Map;
 public class WebLogAspect {
 
 
-//    private Logger logger = Logger.getLogger(getClass());
+    private Logger logger = Logger.getLogger(getClass());
 
-    private Logger logger = Logger.getLogger("mongodb");
+//    private Logger logger = Logger.getLogger("mongodb");
 
     ThreadLocal<Long> startTime  = new ThreadLocal<>();
 
@@ -92,7 +93,6 @@ public class WebLogAspect {
         }
         return map;
     }
-
 
 
 

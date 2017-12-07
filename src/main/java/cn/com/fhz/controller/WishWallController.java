@@ -9,9 +9,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by woni on 17/6/1.
@@ -43,4 +45,13 @@ public class WishWallController {
 
         return null;
     }
+
+    @RequestMapping("getAll")
+    @ResponseBody
+    public List<WishWall> getAllWishWallByUserId(String userid){
+        List<WishWall> list = wishWallService.listByUserId(userid);
+        return list;
+    }
+
+
 }
