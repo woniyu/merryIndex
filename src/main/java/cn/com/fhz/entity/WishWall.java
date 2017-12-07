@@ -4,6 +4,9 @@ package cn.com.fhz.entity;
  * Created by woni on 17/5/30.
  */
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -21,9 +24,13 @@ public class WishWall {
     private Long id;
     private String userId;
     private String content;
+
+
     private Date createTime;
     private Date updateTime;
 
+//    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
     public Date getCreateTime() {
         return createTime;
     }
