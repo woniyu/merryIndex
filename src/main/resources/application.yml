@@ -1,4 +1,3 @@
-
 spring:
   datasource:
       driver-class-name: com.mysql.jdbc.Driver
@@ -11,6 +10,9 @@ spring:
     show-sql: true
   thymeleaf:
     cache: false
+  data:
+    mongodb:
+      uri: mongodb://114.215.151.127
 server:
   context-path: /merry
   port: 8080
